@@ -8,6 +8,9 @@
   
   - ##### Environment
       - Create an environment and name it, what it does is,you can store variables like api keys, user name,passwords you can use them as local and global variables
+      - Let's take an url https://example.org?user_id=sir_jp9&password=pw_jp9&phone=+91987456317&email=sir_jp@gmil.com
+      - From above url we can get url params user_id, password, phone, email, for each request environment makes easy to pass different values for different params
+      
   - ##### Collections
       - THese are helpful to store repeated requests, we can use output of one request in other requests, by storing the output as environment global/local variables
   - ##### Assertions
