@@ -9,13 +9,21 @@
   - ##### Environment
       - Create an environment and name it, what it does is,you can store variables like api keys, user name,passwords you can use them as local and global variables
       - Let's take an url https://example.org?user_id=sir_jp9&password=pw_jp9&phone=+91987456317&email=sir_jp@gmil.com
-      - From above url we can get url params user_id, password, phone, email, for each request environment makes easy to pass different values for different params
+      - From above url we can get url params user_id, password, phone, email, for each request environment makes easy to pass different values for different params in the params data editor
       
   - ##### Collections
       - THese are helpful to store repeated requests, we can use output of one request in other requests, by storing the output as environment global/local variables
   - ##### Assertions
       - Essential to check API output's and status code, AUTOMATION is also possible
-      
+      - Example: ```js
+                      pm.test("Status code is 200", function () {
+                          pm.response.to.have.status(200);
+                      });
+                      pm.test("test result is json or not", function () {
+                          var jsonData = pm.response.json();
+                          pm.expect(jsonData["results"][0]).to.include.keys("address_components")
+                      })
+                ```
 ### Google maps (Sending request with API key)
   - go through [this](https://developers.google.com/maps/documentation/geocoding/start)
   - create an api key
@@ -29,3 +37,6 @@
   - It gives us json output, we can change  it either   
   
 ### Twiter (Sending request with Authorization)
+- create twitter developer account
+- once succesful creation, create an api 
+- get user api [here](https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-users-show)
