@@ -15,15 +15,16 @@
       - THese are helpful to store repeated requests, we can use output of one request in other requests, by storing the output as environment global/local variables
   - ##### Assertions
       - Essential to check API output's and status code, AUTOMATION is also possible
-      - Example: ```js
-                      pm.test("Status code is 200", function () {
-                          pm.response.to.have.status(200);
-                      });
-                      pm.test("test result is json or not", function () {
-                          var jsonData = pm.response.json();
-                          pm.expect(jsonData["results"][0]).to.include.keys("address_components")
-                      })
-                ```
+      - Example: 
+      ```js
+        pm.test("Status code is 200", function () {
+            pm.response.to.have.status(200);
+        });
+        pm.test("test result is json or not", function () {
+            var jsonData = pm.response.json();
+            pm.expect(jsonData["results"][0]).to.include.keys("address_components")
+        })
+    ```
 ### Google maps (Sending request with API key)
   - go through [this](https://developers.google.com/maps/documentation/geocoding/start)
   - create an api key
